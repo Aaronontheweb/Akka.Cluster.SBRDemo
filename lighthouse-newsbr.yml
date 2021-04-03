@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: lightouse-sbr2
+  name: lighthouse-sbr2
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: lighthouse
-  namespace: lightouse-sbr2
+  namespace: lighthouse-sbr2
   labels:
     app: lighthouse
 spec:
@@ -20,7 +20,7 @@ spec:
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  namespace: lightouse-sbr2
+  namespace: lighthouse-sbr2
   name: lighthouse
   labels:
     app: lighthouse
@@ -38,7 +38,7 @@ spec:
       terminationGracePeriodSeconds: 35
       containers:
       - name: lighthouse
-        image: petabridge/lighthouse:1.5.1
+        image: arkatufus/lighthouse:1.5.2
         lifecycle:
           preStop:
             exec:
