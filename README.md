@@ -1,4 +1,7 @@
 # Akka.Cluster.SBRDemo
+
+## Resolved - this was caused by https://github.com/petabridge/akkadotnet-bootstrap/issues/128
+
  Akka.Cluster.SBR vs. Akka.Cluster SplitBrainResolver demo - from [Akka.NET v1.4.17](https://github.com/akkadotnet/akka.net/releases/tag/1.4.17) and later
  
  This repository demonstrates the lack of robustness of the old [Akka.NET cluster split brain resolvers](https://getakka.net/articles/clustering/split-brain-resolver.html) compared to the new ones introduced into Akka.NET in v1.4.17.
